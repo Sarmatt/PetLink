@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AnimalSystem.StateMachineSystem.States
+namespace Systems.AnimalSystem.StateMachineSystem.States
 {
     public class BallFollowAnimalState : BaseAnimalState
     {

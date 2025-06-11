@@ -1,4 +1,4 @@
-namespace AnimalSystem.StateMachineSystem.States
+namespace Systems.AnimalSystem.StateMachineSystem.States
 {
     public abstract class BaseAnimalState
     {

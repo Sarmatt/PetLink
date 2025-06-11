@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Systems
+namespace Systems.NavigationSystem
 {
     public static class RandomPositionFinder
     {

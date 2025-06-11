@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace AnimalSystem.StateMachineSystem.States
+namespace Systems.AnimalSystem.StateMachineSystem.States
 {
     public class IdleAnimalState : BaseAnimalState
     {

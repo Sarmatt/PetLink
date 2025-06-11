@@ -4,7 +4,7 @@ using Sirenix.OdinInspector;
 using Unity.AI.Navigation;
 using UnityEngine;
 
-namespace NavigationSystem
+namespace Systems.NavigationSystem
 {
     public class NavigationSurfaceBaker : MonoBehaviour
     {

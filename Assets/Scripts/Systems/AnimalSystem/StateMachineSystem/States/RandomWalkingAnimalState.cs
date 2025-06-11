@@ -1,7 +1,7 @@
-using Systems;
+using Systems.NavigationSystem;
 using UnityEngine;
 
-namespace AnimalSystem.StateMachineSystem.States
+namespace Systems.AnimalSystem.StateMachineSystem.States
 {
     public class RandomWalkingAnimalState : BaseAnimalState
     {

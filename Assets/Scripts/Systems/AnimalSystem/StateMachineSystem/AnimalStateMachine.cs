@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
-using AnimalSystem.StateMachineSystem.States;
 using Sirenix.OdinInspector;
+using Systems.AnimalSystem.StateMachineSystem.States;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
-namespace AnimalSystem.StateMachineSystem
+namespace Systems.AnimalSystem.StateMachineSystem
 {
     public class AnimalStateMachine : MonoBehaviour
     {
@@ -22,11 +22,23 @@ namespace AnimalSystem.StateMachineSystem
         [TabGroup("Random Walking State")] [SerializeField]
         private int _maxAttempts = 30;
 
+        [TabGroup("Drinking State")] [SerializeField]
+        private float _drinkingTime = 1f;
+        
+        [TabGroup("Feeding State")] [SerializeField]
+        private float _eatingTime = 1f;
+        
+        [TabGroup("Sleeping State")] [SerializeField]
+        private float _sleepingTime = 1f;
+
         private BaseAnimalState _currentState = null;
 
         public float RandomWaitingTime => Random.Range(_waitingTime.x, _waitingTime.y);
         public float SampleRadius => _sampleRadius;
         public int MaxAttempts => _maxAttempts;
+        public float DrinkingTime => _drinkingTime;
+        public float EatingTime => _eatingTime;
+        public float SleepingTime => _sleepingTime;
 
         private void Start()
             => SetDefaultState();
@@ -70,19 +82,15 @@ namespace AnimalSystem.StateMachineSystem
 
         public void SetNextState()
         {
-            SetState(new RandomWalkingAnimalState());
+            //SetState(new RandomWalkingAnimalState());
+            SetState(new DrinkingAnimalState());
         }
 
         public void SetDefaultState()
         {
             SetState(new IdleAnimalState());
         }
-
-        [Button]
-        private void SetRandomWalking()
-            => SetState(new RandomWalkingAnimalState());
-
-        [Button]
+        
         private void SetAgentStopped(bool isStopped)
         {
             Debug.Log($"{nameof(SetAgentStopped)} {isStopped}");
