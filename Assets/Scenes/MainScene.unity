@@ -2354,14 +2354,14 @@ MonoBehaviour:
   SpawnObject: {fileID: 3125350132588333393, guid: dcfccc8f6e56a234ea0a4449ce5036c8,
     type: 3}
   SpawnAmount: 1
-  MaxIterations: 1000
+  MaxIterations: 10000
   SpawnLocations: 3
   Labels: 1
   CheckOverlaps: 0
   OverrideBounds: -1
   LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   SurfaceClearanceDistance: 0.1
 --- !u!114 &1991705505
 MonoBehaviour:

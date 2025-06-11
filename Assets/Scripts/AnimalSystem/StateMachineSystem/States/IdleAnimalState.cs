@@ -10,6 +10,9 @@ namespace AnimalSystem.StateMachineSystem.States
             base.OnEnter();
             StateMachine.StartCoroutine(WaitingRoutine());
         }
+        
+        protected override void OnExit()
+            => StateMachine.SetNextState();
 
         private IEnumerator WaitingRoutine()
         {
