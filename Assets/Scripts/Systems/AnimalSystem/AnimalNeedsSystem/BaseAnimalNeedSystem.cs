@@ -15,6 +15,10 @@ namespace Systems.AnimalSystem.AnimalNeedsSystem
         public Action OnFullPointsReached { get; set; }
         
         private int _currentNeedPointsCount;
+        
+        public bool IsHalf => _currentNeedPointsCount <= _defaultNeedPointsCount / 2;
+        public bool IsFull => _currentNeedPointsCount >= _defaultNeedPointsCount;
+        public bool IsZero => _currentNeedPointsCount <= 0;
 
         private void Start()
         {
@@ -40,11 +44,11 @@ namespace Systems.AnimalSystem.AnimalNeedsSystem
         {
             var pointsPercent = _currentNeedPointsCount / _defaultNeedPointsCount;
 
-            if (pointsPercent <= 0)
+            if (IsZero)
                 OnZeroPointsReached?.Invoke();
-            else if (pointsPercent <= 0.5f)
+            else if (IsHalf)
                 OnFullPointsReached?.Invoke();
-            else
+            else if(IsFull)
                 OnHalfPointsReached?.Invoke();
         }
         

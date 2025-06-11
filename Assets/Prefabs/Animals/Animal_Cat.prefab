@@ -221,6 +221,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _navMeshAgent: {fileID: 5120227999100709169}
+  _sleepNeedSystem: {fileID: 8266987702890938556}
+  _drinkingNeedSystem: {fileID: 9058117946625243963}
+  _eatingNeedSystem: {fileID: 5699952610246261476}
+  _funNeedSystem: {fileID: 5128317133485496907}
   _waitingTime: {x: 1, y: 4}
   _sampleRadius: 5
   _maxAttempts: 30

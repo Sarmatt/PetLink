@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Sirenix.OdinInspector;
+using Systems.AnimalSystem.AnimalNeedsSystem;
 using Systems.AnimalSystem.StateMachineSystem.States;
 using UnityEngine;
 using UnityEngine.AI;
@@ -12,6 +13,10 @@ namespace Systems.AnimalSystem.StateMachineSystem
     {
         [Title("Attached Components")] [SerializeField]
         private NavMeshAgent _navMeshAgent;
+        [SerializeField] private BaseAnimalNeedSystem _sleepNeedSystem;
+        [SerializeField] private BaseAnimalNeedSystem _drinkingNeedSystem;
+        [SerializeField] private BaseAnimalNeedSystem _eatingNeedSystem;
+        [SerializeField] private BaseAnimalNeedSystem _funNeedSystem;
 
         [TabGroup("Idle State")] [SerializeField]
         private Vector2 _waitingTime = new Vector2(0.1f, 10f);
@@ -82,8 +87,14 @@ namespace Systems.AnimalSystem.StateMachineSystem
 
         public void SetNextState()
         {
-            //SetState(new RandomWalkingAnimalState());
-            SetState(new DrinkingAnimalState());
+            if(!_drinkingNeedSystem.IsFull)
+                SetState(new DrinkingAnimalState());
+            else if(!_sleepNeedSystem.IsFull)
+                SetState(new SleepingAnimalState());
+            else if(!_eatingNeedSystem.IsFull)
+                SetState(new FeedingAnimalState());
+            else
+                SetState(new RandomWalkingAnimalState());
         }
 
         public void SetDefaultState()
