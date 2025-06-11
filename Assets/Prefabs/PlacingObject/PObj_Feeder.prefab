@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1277619106655344025}
   - component: {fileID: 3499528312705853730}
   m_Layer: 0
-  m_Name: Prefab_Feeder
+  m_Name: PObj_Feeder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
