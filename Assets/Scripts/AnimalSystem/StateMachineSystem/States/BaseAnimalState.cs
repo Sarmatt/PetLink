@@ -11,6 +11,12 @@ namespace AnimalSystem.StateMachineSystem.States
         }
         
         protected virtual void OnEnter() { }
-        public virtual void OnExit() { }
+
+        public virtual void OnExit()
+        {
+            StateMachine.SetNextState();
+        }
+        
+        public virtual void Break(){}
     }
 }
