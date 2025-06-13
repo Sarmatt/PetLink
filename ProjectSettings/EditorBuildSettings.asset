@@ -6,8 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainScenes.unity
+    path: Assets/Scenes/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Samples/Meta - Voice SDK - Immersive Voice Commands/77.0.0/Built-In
+      Timer/BuiltInTimer.unity
+    guid: 9e6f8accd4b079d40b3603449f318633
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 94eddd755db684549abbf61695d34652,
       type: 2}
