@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "506115613550",
+    "firebase_url": "https://petlink-a1299-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "petlink-a1299",
+    "storage_bucket": "petlink-a1299.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:506115613550:android:1d2993a5ed8e6ed23f977f",
+        "android_client_info": {
+          "package_name": "com.LiteralNest.PetLink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV0st44a9KWi_Xx7K7IHwfQv3Dkl5yn_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
