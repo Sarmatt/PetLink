@@ -161,6 +161,7 @@ GameObject:
   - component: {fileID: 8762032573844471615}
   - component: {fileID: 5120227999100709169}
   - component: {fileID: 2802034596140573671}
+  - component: {fileID: -3021210917058329546}
   m_Layer: 6
   m_Name: Animal_Cat
   m_TagString: Untagged
@@ -231,6 +232,22 @@ MonoBehaviour:
   _drinkingTime: 1
   _eatingTime: 1
   _sleepingTime: 1
+--- !u!114 &-3021210917058329546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3125350132588333393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce84fbfa147405b97ade35a37367f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hungryNeedSystem: {fileID: 5699952610246261476}
+  _thirstyNeedSystem: {fileID: 9058117946625243963}
+  _sleepNeedSystem: {fileID: 8266987702890938556}
+  _happinessNeedSystem: {fileID: 5128317133485496907}
 --- !u!1 &3280580225409192407
 GameObject:
   m_ObjectHideFlags: 0

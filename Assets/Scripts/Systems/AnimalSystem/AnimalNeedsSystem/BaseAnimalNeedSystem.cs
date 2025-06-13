@@ -17,7 +17,7 @@ namespace Systems.AnimalSystem.AnimalNeedsSystem
         private int _currentNeedPointsCount;
         
         public bool IsHalf => _currentNeedPointsCount <= _defaultNeedPointsCount / 2;
-        public bool IsFull => _currentNeedPointsCount >= _defaultNeedPointsCount;
+        public bool IsFull => _currentNeedPointsCount > _defaultNeedPointsCount / 2;
         public bool IsZero => _currentNeedPointsCount <= 0;
 
         private void Start()
@@ -42,14 +42,12 @@ namespace Systems.AnimalSystem.AnimalNeedsSystem
 
         private void CheckRemainingPoints()
         {
-            var pointsPercent = _currentNeedPointsCount / _defaultNeedPointsCount;
-
             if (IsZero)
                 OnZeroPointsReached?.Invoke();
             else if (IsHalf)
-                OnFullPointsReached?.Invoke();
-            else if(IsFull)
                 OnHalfPointsReached?.Invoke();
+            else if(IsFull)
+                OnFullPointsReached?.Invoke();
         }
         
         private IEnumerator RemovePointPerSecond()
