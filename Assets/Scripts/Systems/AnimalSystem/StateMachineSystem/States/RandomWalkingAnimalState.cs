@@ -20,9 +20,9 @@ namespace Systems.AnimalSystem.StateMachineSystem.States
             StateMachine.MoveTo(targetPoint, OnExit);
         }
         
-        public override void Break()
+        protected override void OnExit()
         {
-            base.Break();
+            base.OnExit();
             StateMachine.AnimalAnimator.SetWalkingState(false);
         }
     }

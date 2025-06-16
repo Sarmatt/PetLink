@@ -100,6 +100,9 @@ namespace Systems.AnimalSystem.StateMachineSystem
                 SetState(new RandomWalkingAnimalState());
         }
 
+        public void HandleAnimalPet()
+            => _funNeedSystem.RestorePoints();
+
         public void SetDefaultState()
         {
             SetState(new IdleAnimalState());
@@ -110,5 +113,11 @@ namespace Systems.AnimalSystem.StateMachineSystem
             Debug.Log($"{nameof(SetAgentStopped)} {isStopped}");
             _navMeshAgent.isStopped = isStopped;
         }
+
+        public void HandleSitCommand()
+            => SetState(new AnimalSitState());
+
+        public void HandleStandUpCommand()
+            => SetDefaultState();
     }
 }
