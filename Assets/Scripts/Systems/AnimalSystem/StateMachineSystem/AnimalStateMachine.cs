@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Sirenix.OdinInspector;
 using Systems.AnimalSystem.AnimalNeedsSystem;
+using Systems.AnimalSystem.AnimationSystem;
 using Systems.AnimalSystem.StateMachineSystem.States;
 using UnityEngine;
 using UnityEngine.AI;
@@ -13,6 +14,10 @@ namespace Systems.AnimalSystem.StateMachineSystem
     {
         [Title("Attached Components")] [SerializeField]
         private NavMeshAgent _navMeshAgent;
+        [SerializeField] private AnimalSoundSpawner _animalSoundSpawner;
+        [SerializeField] private AnimalAnimator _animalAnimator;
+        
+        [Title("Statess")]
         [SerializeField] private BaseAnimalNeedSystem _sleepNeedSystem;
         [SerializeField] private BaseAnimalNeedSystem _drinkingNeedSystem;
         [SerializeField] private BaseAnimalNeedSystem _eatingNeedSystem;
@@ -26,23 +31,19 @@ namespace Systems.AnimalSystem.StateMachineSystem
 
         [TabGroup("Random Walking State")] [SerializeField]
         private int _maxAttempts = 30;
-
-        [TabGroup("Drinking State")] [SerializeField]
-        private float _drinkingTime = 1f;
-        
-        [TabGroup("Feeding State")] [SerializeField]
-        private float _eatingTime = 1f;
         
         [TabGroup("Sleeping State")] [SerializeField]
         private float _sleepingTime = 1f;
 
         private BaseAnimalState _currentState = null;
 
+        public AnimalAnimator AnimalAnimator => _animalAnimator;
+        public AnimalSoundSpawner AnimalSoundSpawner => _animalSoundSpawner;
         public float RandomWaitingTime => Random.Range(_waitingTime.x, _waitingTime.y);
         public float SampleRadius => _sampleRadius;
         public int MaxAttempts => _maxAttempts;
-        public float DrinkingTime => _drinkingTime;
-        public float EatingTime => _eatingTime;
+        public float DrinkingTime => AnimalSoundSpawner.DrinkSound.length;
+        public float EatingTime => AnimalSoundSpawner.EatSound.length;
         public float SleepingTime => _sleepingTime;
 
         private void Start()
@@ -70,6 +71,7 @@ namespace Systems.AnimalSystem.StateMachineSystem
 
         private IEnumerator MoveToRoutine(Vector3 targetPoint, Action onArrived)
         {
+            _animalAnimator.SetWalkingState(true);
             TryRepositionNavMesh();
             SetAgentStopped(true);
             _navMeshAgent.SetDestination(targetPoint);
@@ -79,6 +81,7 @@ namespace Systems.AnimalSystem.StateMachineSystem
             while (_navMeshAgent.remainingDistance > _navMeshAgent.stoppingDistance)
                 yield return null;
                         
+            _animalAnimator.SetWalkingState(false);
             onArrived?.Invoke();
         }
 

@@ -26,7 +26,9 @@ namespace Systems.AnimalSystem.StateMachineSystem.States
 
         private IEnumerator FeederRoutine()
         {
-            yield return new WaitForSeconds(StateMachine.SleepingTime);
+            StateMachine.AnimalAnimator.SetFeedingState(true);
+            yield return new WaitForSeconds(StateMachine.EatingTime);
+            StateMachine.AnimalAnimator.SetFeedingState(false);
             OnExit();
         }
     }

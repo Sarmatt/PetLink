@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80e20830-1f18-448e-85a1-b485f656405f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/ArduinoCommunicationSystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/ArduinoCommunicationSystem/ArduinoCommunicator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/ArduinoCommunicationSystem/ArduinoCommunicator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/AnimalSystem/AnimalSoundSpawner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/AnimalSystem/AnimalSoundSpawner.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/SoundSystem.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/SoundSystem/WorldSoundsPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/SoundSystem/WorldSoundsPlayer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/SoundSystem/WorldsSoundsSpawner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/SoundSystem/WorldsSoundsSpawner.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PetLink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PetLink/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/AnimalSystem/AnimationSystem.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/AnimalSystem/AnimationSystem/AnimalAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/AnimalSystem/AnimalAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/AnimalSystem/AnimationSystem/AnimalAnimator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/AnimalSystem/AnimalAnimator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/AnimalSystem/StateMachineSystem/AnimalStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/AnimalSystem/StateMachineSystem/AnimalStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/AnimalSystem/StateMachineSystem/States/DrinkingAnimalState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/AnimalSystem/StateMachineSystem/States/DrinkingAnimalState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/AnimalSystem/StateMachineSystem/States/FeedingAnimalState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/AnimalSystem/StateMachineSystem/States/FeedingAnimalState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +126,8 @@
       <updated>1749632115204</updated>
       <workItem from="1749632117016" duration="11043000" />
       <workItem from="1749819168524" duration="11481000" />
-      <workItem from="1750021444301" duration="1773000" />
+      <workItem from="1750021444301" duration="3024000" />
+      <workItem from="1750046986613" duration="925000" />
     </task>
     <servers />
   </component>

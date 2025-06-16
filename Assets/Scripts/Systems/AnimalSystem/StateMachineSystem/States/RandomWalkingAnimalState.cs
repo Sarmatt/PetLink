@@ -19,5 +19,11 @@ namespace Systems.AnimalSystem.StateMachineSystem.States
 
             StateMachine.MoveTo(targetPoint, OnExit);
         }
+        
+        public override void Break()
+        {
+            base.Break();
+            StateMachine.AnimalAnimator.SetWalkingState(false);
+        }
     }
 }

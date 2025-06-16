@@ -26,7 +26,10 @@ namespace Systems.AnimalSystem.StateMachineSystem.States
 
         private IEnumerator DrinkingRoutine()
         {
+            StateMachine.AnimalSoundSpawner.PlayDrinkSound();
+            StateMachine.AnimalAnimator.SetDrinkingState(true);
             yield return new WaitForSeconds(StateMachine.DrinkingTime);
+            StateMachine.AnimalAnimator.SetDrinkingState(false);
             OnExit();
         }
     }
